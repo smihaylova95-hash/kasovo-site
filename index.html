@@ -32,21 +32,8 @@
   .badge small{font-size:11px;letter-spacing:.08em;color:var(--amber);font-weight:700}
   .badge b{font-size:22px;font-weight:800}
   .badge i{font-style:normal;font-size:12px;opacity:.85}
-  .phone{background:#fff;border:8px solid #102a22;border-radius:40px;padding:18px 16px 14px;box-shadow:0 30px 70px rgba(15,31,23,.16);max-width:360px;margin:0 auto}
-  .ph-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  .ph-top .logo{font-size:18px}.ph-top .logo svg{width:26px;height:26px}
-  .plus{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700;line-height:1}
-  .ph-h{font-size:24px;font-weight:800;margin:4px 0 10px;letter-spacing:-.02em}
-  .chips{display:flex;gap:6px;margin-bottom:12px}
-  .chips span{font-size:12px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--mint)}
-  .chips span.on{background:var(--green);color:#fff}
-  .row{display:flex;align-items:center;gap:10px;padding:10px 10px;border:1px solid var(--line);border-radius:14px;margin-bottom:8px;background:#fff}
-  .th{width:44px;height:44px;border-radius:12px;background:var(--mint);display:grid;place-items:center;flex:0 0 44px}.th svg{width:34px;height:34px}
-  .rt{flex:1;min-width:0}.rt b{display:block;font-size:14px}.rt span{font-size:12px;color:var(--muted)}
-  .pill{font-size:11px;font-weight:800;padding:5px 9px;border-radius:999px;white-space:nowrap}
-  .g{background:#dcf5e5;color:#15803d}.a{background:#fdf0cc;color:#8a5b00}.r{background:#fde2e2;color:#b42318}
-  .ph-nav{display:flex;justify-content:space-around;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}
-  .ph-nav b{color:var(--green)}
+  .shot{max-width:340px;margin:0 auto;border-radius:44px;padding:10px;background:#102a22;box-shadow:0 30px 70px rgba(15,31,23,.18)}
+  .shot img{display:block;width:100%;height:auto;border-radius:36px}
   .feats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 32px;padding:0 0 64px}
   .feat{display:flex;gap:16px;align-items:flex-start}
   .ic{flex:0 0 56px;height:56px;border-radius:16px;background:var(--mint);display:grid;place-items:center}
@@ -59,14 +46,20 @@
   .law p{margin:0;color:#cfe6d8}
   .law .big{font-size:72px;font-weight:900;line-height:1;color:var(--amber);letter-spacing:-.03em}
   .law .big small{display:block;font-size:13px;letter-spacing:.14em;color:var(--amber);opacity:.9;margin-top:8px;font-weight:700}
-  .vals{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;padding:0 0 64px;align-items:center}
-  .vals h2{margin:0 0 8px;font-size:24px}.vals p{margin:0;color:var(--muted)}
-  .vals ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-  .vals li{display:flex;align-items:center;gap:10px;font-weight:600}
-  .vals li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--green) url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%223%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M6 12l4 4 8-8%22/></svg>') center/14px no-repeat;flex:0 0 22px}
+  .how{padding:0 0 64px}.how h2{font-size:30px;letter-spacing:-.02em;margin:0 0 24px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+  .step .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;margin-bottom:12px}
+  .step h3{margin:0 0 6px;font-size:18px}.step p{margin:0;color:var(--muted);font-size:15px}
+  .price{padding:0 0 64px}.price h2{font-size:30px;letter-spacing:-.02em;margin:0 0 20px}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+  .plan h3{margin:0 0 8px;font-size:20px}.plan p{margin:0;color:var(--muted)}.plan small{display:block;margin-top:12px;color:var(--green-d);font-weight:700}
+  .plan.pro{background:var(--green-d);color:#fff;border-color:var(--green-d)}.plan.pro p{color:#cfe6d8}.plan.pro small{color:var(--amber)}
+  .foottag{text-align:center;font-weight:800;font-size:22px;letter-spacing:-.01em;color:var(--green-d);margin:0 0 24px}
   footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   footer a{color:var(--muted);margin-right:18px}
-  @media(max-width:860px){.hero,.law,.vals{grid-template-columns:1fr}.feats{grid-template-columns:1fr}nav a{margin-left:12px}.hero::before{display:none}}
+  @media(max-width:860px){.hero,.law,.plans{grid-template-columns:1fr}.feats,.steps{grid-template-columns:1fr}nav a{margin-left:12px}.hero::before{display:none}}
 </style>
 </head>
 <body>
@@ -78,34 +71,33 @@
 
   <section class="hero">
     <div>
-      <p class="tag">ПОКУПКИ · БЕЛЕЖКИ · ГАРАНЦИИ</p>
-      <h1>Всички покупки.<br>Всички гаранции.<br><span class="u">На едно място.</span></h1>
-      <p class="sub">Снимай касовата бележка. Kasovo ти напомня преди да изтече гаранцията или срокът за връщане — от всеки магазин, не само от един.</p>
+      <p class="tag">ВСИЧКИ МАГАЗИНИ · ЕДНО ПРИЛОЖЕНИЕ</p>
+      <h1>От покупката<br>до рекламацията.<br><span class="u">Всичко на едно място.</span></h1>
+      <p class="sub">Касови бележки, гаранции, срокове за връщане и помощ при рекламация — организирани в едно приложение. Без акаунт. Без абонамент.</p>
       <span class="cta soon">Скоро в App Store</span>
       <p class="note">iPhone · без регистрация · без облак · еднократна цена</p>
       <div class="badge"><small>★ ★ ★ ЗАКОНОВА ГАРАНЦИЯ</small><b>2 години</b><i>(ЕС)</i></div>
     </div>
-    <div class="phone">
-      <div class="ph-top"><span class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d7f"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg2)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#2a9d7f" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</span><span class="plus">+</span></div>
-      <div class="ph-h">Покупки</div>
-      <div class="chips"><span class="on">Всички</span><span>Активни</span><span>Изтичат</span></div>
-      <div class="row"><div class="th"><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="21" rx="2.5" fill="#1f2937"/><rect x="10.5" y="12.5" width="27" height="16" rx="1" fill="#60a5fa"/><rect x="4" y="32" width="40" height="4" rx="2" fill="#9ca3af"/><rect x="19" y="32" width="10" height="2" fill="#6b7280"/></svg></div><div class="rt"><b>Лаптоп Lenovo</b><span>Технополис</span></div><span class="pill g">487 дни</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><defs><radialGradient id="gl" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect x="8" y="5" width="32" height="38" rx="4" fill="#e5e7eb"/><rect x="8" y="5" width="32" height="9" rx="4" fill="#d1d5db"/><circle cx="14" cy="9.5" r="1.8" fill="#374151"/><circle cx="19.5" cy="9.5" r="1.8" fill="#374151"/><rect x="26" y="8" width="11" height="3" rx="1.5" fill="#9ca3af"/><circle cx="24" cy="28" r="11" fill="#374151"/><circle cx="24" cy="28" r="8.5" fill="#bfdbfe"/><path d="M17.5 30c2-3 5-3 7-1s5 2 7-1" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="28" r="8.5" fill="url(#gl)" opacity=".5"/></svg></div><div class="rt"><b>Пералня Bosch</b><span>Зора</span></div><span class="pill g">416 дни</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="12" rx="4" fill="#c2794a"/><rect x="5" y="22" width="38" height="12" rx="4" fill="#a8623a"/><rect x="9" y="24" width="14" height="8" rx="2" fill="#c2794a"/><rect x="25" y="24" width="14" height="8" rx="2" fill="#c2794a"/><rect x="8" y="34" width="4" height="4" fill="#5b3a21"/><rect x="36" y="34" width="4" height="4" fill="#5b3a21"/></svg></div><div class="rt"><b>Диван</b><span>IKEA</span></div><span class="pill a">58 дни</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><path d="M6 32c0-3 2-5 6-6l8-8c2-2 4-2 6 0l3 3c3 3 8 4 12 5 3 1 4 3 4 6v2H6z" fill="#1d4ed8"/><path d="M6 34h39v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z" fill="#f3f4f6"/><path d="M20 20l3 3M24 17l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M12 26c5 1 9 3 13 6" stroke="#93c5fd" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><div class="rt"><b>Маратонки</b><span>Sport Depot · връщане</span></div><span class="pill r">2 дни</span></div>
-      <div class="ph-nav"><b>●</b><span>○</span><span>○</span></div>
-    </div>
+    <div class="shot"><img src="home-bg.png" alt="Екранът „Покупки" в Kasovo" width="538" height="1170" loading="eager"></div>
   </section>
 
-  <section class="feats" id="how"><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div><h3>Пази касовите бележки</h3><p>Дигитален архив на всички покупки от всички магазини.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Следи гаранциите</h3><p>Автоматично изчислява 2-годишната законова гаранция (ЕС) и търговската, ако има.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg></div><div><h3>Напомня навреме</h3><p>Известия преди изтичане на гаранция или срок за връщане.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h3>Подготви рекламация</h3><p>Създай PDF и изпрати имейл до магазина за минути.</p></div></div></section>
+  <section class="feats" id="how"><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div><h3>Всички бележки на едно място</h3><p>Снимай касовата бележка и я добави към покупката. Без повече търсене в чекмеджета, имейли и галерията на телефона.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Знай кога изтича гаранцията</h3><p>Следи законовите и търговските гаранции на продуктите си. Kasovo ти напомня преди важните крайни срокове.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg></div><div><h3>Не изпускай срока за връщане</h3><p>При онлайн покупка имаш 14 дни от получаването да се откажеш. Kasovo ти напомня, преди да изтекат.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h3>Имаш проблем? Kasovo помага.</h3><p>Намери официалните канали за контакт с магазина, подготви рекламация и събери необходимите документи на едно място.</p></div></div></section>
+
+  <section class="how"><h2>Купуваш. Запазваш. Kasovo помни.</h2><div class="steps"><div class="step"><span class="n">1</span><h3>Добави покупка</h3><p>Въведи продукта, магазина и датата. Снимай бележката.</p></div><div class="step"><span class="n">2</span><h3>Следи важните срокове</h3><p>Виж гаранциите и сроковете за връщане. Получавай напомняния.</p></div><div class="step"><span class="n">3</span><h3>Реагирай лесно при проблем</h3><p>Опиши проблема, подготви документите и открий как да се свържеш с търговеца или сервиза.</p></div></div></section>
 
   <section class="law">
     <div><div class="big">2 г.<small>ЗАКОНОВА ГАРАНЦИЯ · (ЕС)</small></div></div>
-    <div><h2>Законовата гаранция в ЕС е 2 години. Винаги.</h2><p>Дори магазинът да ти е дал 6 месеца „търговска гаранция", законът ти дава две години от датата на получаване. Kasovo го знае по подразбиране и показва и двете.</p></div>
+    <div><h2>Всичко важно остава при теб.</h2><p>Без регистрация. Без собствен облак на Kasovo. Документите се съхраняват локално на телефона ти, с възможност за резервно копие и възстановяване.</p></div>
   </section>
 
-  <section class="vals">
-    <div><h2>Обещание</h2><p>Спокойствие след покупката. Документите ти са организирани, сроковете са под контрол, а рекламацията е по-лесна.</p></div>
-    <ul><li>Просто и удобно</li><li>Сигурно и поверително</li><li>Без абонамент</li><li>Създадено за реални нужди</li></ul>
+  <section class="price"><h2>Започни безплатно.</h2>
+    <div class="plans">
+      <div class="plan"><h3>Безплатно</h3><p>Съхранявай до 5 покупки безплатно.</p></div>
+      <div class="plan pro"><h3>Kasovo Pro — 9,99 € еднократно</h3><p>Неограничени покупки и PDF експорт на документи за рекламации.</p><small>Едно плащане. Без месечен абонамент.</small></div>
+    </div>
   </section>
 
+  <p class="foottag">Покупките са твои. Документите също.</p>
   <footer>
     <div><a href="privacy.html">Поверителност</a><a href="support.html">Поддръжка</a><a href="mailto:support@kasovo.com">support@kasovo.com</a></div>
     <div>© 2026 Rhodope Labs · Пловдив</div>
