@@ -7,7 +7,7 @@
 <meta name="description" content="Всички покупки. Всички гаранции. На едно място. Kasovo пази касовите ти бележки и ти напомня преди да изтече гаранцията или срокът за връщане.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
-  :root{--ink:#0f1f17;--muted:#56665e;--bg:#ffffff;--mint:#eaf6ee;--mint2:#d9efe1;--green:#15803d;--green-d:#0b5a35;--green-l:#1f9d5a;--line:#e3ebe6;--amber:#f59e0b;--red:#dc2626}
+  :root{--ink:#102a22;--muted:#5b6b64;--bg:#f7f5ef;--mint:#e4efe8;--mint2:#d2e4d9;--green:#0d6b57;--green-d:#0b4a3c;--green-l:#2a9d7f;--line:#e2e6df;--amber:#e0a526;--red:#dc2626}
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
   a{color:var(--green);text-decoration:none}
@@ -15,23 +15,24 @@
   header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--green-d);letter-spacing:-.02em}
   .logo svg{width:36px;height:36px}
-  nav a{margin-left:22px;color:var(--muted);font-size:15px;font-weight:500}
+  nav{margin-left:auto;padding-left:48px}
+  nav a{margin-left:28px;color:var(--muted);font-size:15px;font-weight:500}
   .lang{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px}
   .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:48px 0 64px;position:relative}
-  .hero::before{content:"";position:absolute;right:-120px;top:-40px;width:520px;height:520px;border-radius:50%;background:var(--mint);z-index:-1}
+  .hero::before{content:"";position:absolute;right:-60px;top:-20px;width:460px;height:460px;border-radius:38% 62% 55% 45%/45% 40% 60% 55%;background:var(--mint);z-index:-1;transform:rotate(-8deg)}
   .tag{font-size:12px;letter-spacing:.18em;font-weight:700;color:var(--green);margin:0 0 14px}
   h1{font-size:clamp(36px,5.2vw,60px);line-height:1.02;letter-spacing:-.03em;margin:0 0 18px;font-weight:800;color:var(--ink)}
   h1 .u{position:relative;white-space:nowrap}
-  h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:8px;border-radius:8px;background:var(--green-l);opacity:.9;transform:rotate(-1.2deg)}
+  h1 .u::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-4px;height:12px;border-radius:6px;background:var(--amber);opacity:.55;z-index:-1;transform:rotate(-1deg)}
   .sub{font-size:19px;color:var(--muted);margin:0 0 26px;max-width:36ch}
   .cta{display:inline-flex;align-items:center;gap:10px;background:var(--green-d);color:#fff;padding:14px 22px;border-radius:14px;font-weight:700}
   .cta.soon{background:var(--mint2);color:var(--green-d)}
   .note{font-size:14px;color:var(--muted);margin-top:12px}
   .badge{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;margin-top:26px;background:var(--green-d);color:#fff;border-radius:18px;padding:12px 16px;line-height:1.15}
-  .badge small{font-size:11px;letter-spacing:.08em;color:#ffd84d;font-weight:700}
+  .badge small{font-size:11px;letter-spacing:.08em;color:var(--amber);font-weight:700}
   .badge b{font-size:22px;font-weight:800}
   .badge i{font-style:normal;font-size:12px;opacity:.85}
-  .phone{background:#fff;border:8px solid #10231a;border-radius:40px;padding:18px 16px 14px;box-shadow:0 30px 70px rgba(15,31,23,.16);max-width:360px;margin:0 auto}
+  .phone{background:#fff;border:8px solid #102a22;border-radius:40px;padding:18px 16px 14px;box-shadow:0 30px 70px rgba(15,31,23,.16);max-width:360px;margin:0 auto}
   .ph-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
   .ph-top .logo{font-size:18px}.ph-top .logo svg{width:26px;height:26px}
   .plus{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700;line-height:1}
@@ -40,11 +41,12 @@
   .chips span{font-size:12px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--mint)}
   .chips span.on{background:var(--green);color:#fff}
   .row{display:flex;align-items:center;gap:10px;padding:10px 10px;border:1px solid var(--line);border-radius:14px;margin-bottom:8px;background:#fff}
-  .th{width:38px;height:38px;border-radius:10px;background:var(--mint);display:grid;place-items:center;font-size:18px}
+  .th{width:44px;height:44px;border-radius:12px;background:var(--mint);display:grid;place-items:center;flex:0 0 44px}.th svg{width:34px;height:34px}
   .rt{flex:1;min-width:0}.rt b{display:block;font-size:14px}.rt span{font-size:12px;color:var(--muted)}
   .pill{font-size:11px;font-weight:800;padding:5px 9px;border-radius:999px;white-space:nowrap}
   .g{background:#dcf5e5;color:#15803d}.a{background:#fdf0cc;color:#8a5b00}.r{background:#fde2e2;color:#b42318}
-  .ph-nav{display:flex;justify-content:space-around;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}
+  .chev{color:#b7c0bb;font-size:18px;margin-left:2px}
+  .ph-nav{display:flex;justify-content:space-around;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}.ph-nav i{display:block;font-style:normal;font-size:9px;text-align:center}
   .ph-nav b{color:var(--green)}
   .feats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 32px;padding:0 0 64px}
   .feat{display:flex;gap:16px;align-items:flex-start}
@@ -56,8 +58,8 @@
   .law::after{content:"";position:absolute;right:-80px;bottom:-120px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.06)}
   .law h2{margin:0 0 10px;font-size:28px;letter-spacing:-.01em}
   .law p{margin:0;color:#cfe6d8}
-  .law .big{font-size:72px;font-weight:900;line-height:1;color:#ffd84d;letter-spacing:-.03em}
-  .law .big small{display:block;font-size:13px;letter-spacing:.14em;color:#ffd84d;opacity:.9;margin-top:8px;font-weight:700}
+  .law .big{font-size:72px;font-weight:900;line-height:1;color:var(--amber);letter-spacing:-.03em}
+  .law .big small{display:block;font-size:13px;letter-spacing:.14em;color:var(--amber);opacity:.9;margin-top:8px;font-weight:700}
   .vals{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;padding:0 0 64px;align-items:center}
   .vals h2{margin:0 0 8px;font-size:24px}.vals p{margin:0;color:var(--muted)}
   .vals ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
@@ -71,7 +73,7 @@
 <body>
 <div class="wrap">
   <header>
-    <a class="logo" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f9d5a"/><stop offset="1" stop-color="#0b5a35"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#1f9d5a" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</a>
+    <a class="logo" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d7f"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#2a9d7f" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</a>
     <nav><a href="#how">Как работи</a><a href="support.html">Поддръжка</a><a href="privacy.html">Поверителност</a><a class="lang" href="en/">EN</a></nav>
   </header>
 
@@ -85,11 +87,11 @@
       <div class="badge"><small>★ ★ ★ ЗАКОНОВА ГАРАНЦИЯ</small><b>2 години</b><i>(ЕС)</i></div>
     </div>
     <div class="phone">
-      <div class="ph-top"><span class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f9d5a"/><stop offset="1" stop-color="#0b5a35"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg2)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#1f9d5a" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</span><span class="plus">+</span></div>
+      <div class="ph-top"><span class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d7f"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg2)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#2a9d7f" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</span><span class="plus">+</span></div>
       <div class="ph-h">Покупки</div>
       <div class="chips"><span class="on">Всички</span><span>Активни</span><span>Изтичат</span></div>
-      <div class="row"><div class="th">💻</div><div class="rt"><b>Лаптоп Lenovo</b><span>Технополис</span></div><span class="pill g">487 дни</span></div><div class="row"><div class="th">🫧</div><div class="rt"><b>Пералня Bosch</b><span>Зора</span></div><span class="pill g">416 дни</span></div><div class="row"><div class="th">🛋️</div><div class="rt"><b>Диван</b><span>IKEA</span></div><span class="pill a">58 дни</span></div><div class="row"><div class="th">👟</div><div class="rt"><b>Маратонки</b><span>Sport Depot · връщане</span></div><span class="pill r">2 дни</span></div>
-      <div class="ph-nav"><b>●</b><span>○</span><span>○</span></div>
+      <div class="row"><div class="th"><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="21" rx="2.5" fill="#2b3a46"/><rect x="10.5" y="12.5" width="27" height="16" rx="1" fill="#8fb3cc"/><path d="M4 34h40l-2 4H6z" fill="#b9c4cc"/><rect x="19" y="34" width="10" height="1.6" fill="#8a97a1"/></svg></div><div class="rt"><b>Лаптоп Lenovo</b><span>Технополис</span></div><span class="pill g">487 дни</span><span class="chev">›</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><rect x="7" y="4" width="34" height="40" rx="4" fill="#eef2f5" stroke="#9aa7b2" stroke-width="1.5"/><rect x="7" y="4" width="34" height="9" rx="3" fill="#dfe6ec"/><circle cx="14" cy="8.5" r="1.6" fill="#0d6b57"/><circle cx="20" cy="8.5" r="1.6" fill="#9aa7b2"/><rect x="28" y="7" width="9" height="3" rx="1.5" fill="#9aa7b2"/><circle cx="24" cy="28" r="11" fill="#5f7d93" stroke="#c8d2da" stroke-width="3"/><circle cx="24" cy="28" r="6.5" fill="#8fb3cc"/><path d="M18 30c2-3 5-3 7-1s5 2 7-1" stroke="#dff1fb" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div><div class="rt"><b>Пералня Bosch</b><span>Зора</span></div><span class="pill g">416 дни</span><span class="chev">›</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="12" rx="4" fill="#c98a4b"/><rect x="5" y="22" width="38" height="12" rx="4" fill="#b8763a"/><rect x="5" y="21" width="9" height="12" rx="3" fill="#d49a5e"/><rect x="34" y="21" width="9" height="12" rx="3" fill="#d49a5e"/><rect x="9" y="34" width="3" height="4" fill="#6b4a2b"/><rect x="36" y="34" width="3" height="4" fill="#6b4a2b"/></svg></div><div class="rt"><b>Диван</b><span>IKEA</span></div><span class="pill a">58 дни</span><span class="chev">›</span></div><div class="row"><div class="th"><svg viewBox="0 0 48 48"><path d="M6 31c0-2 1-3 3-3l8-1c2 0 3-2 5-5l3-5c1-1 2-1 3 0l5 4c3 2 7 3 10 4 2 1 3 3 3 5v3H6z" fill="#0d6b57"/><path d="M6 33h40v3H6z" fill="#102a22"/><path d="M22 24l3 2M25 20l3 2M28 17l3 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M15 27c4 0 7-1 9-3" stroke="#2a9d7f" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><div class="rt"><b>Маратонки</b><span>Sport Depot · връщане</span></div><span class="pill r">2 дни</span><span class="chev">›</span></div>
+      <div class="ph-nav"><b>⌂<i>Покупки</i></b><span>⌕<i>Търсене</i></span><span>⚙<i>Настройки</i></span></div>
     </div>
   </section>
 
