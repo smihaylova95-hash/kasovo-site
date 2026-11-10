@@ -28,6 +28,7 @@
 .card em.warn{background:#fbeccb;color:#8a5a00}
 .mini-done{margin:12px 6px 0;font-size:12px;color:var(--green);font-weight:700;opacity:0;transition:opacity .4s}
 .mini-done.on{opacity:1}
+.replay{display:none;margin:10px 6px 0;font:inherit;font-size:13px;font-weight:700;color:var(--green-d);background:var(--mint);border:0;border-radius:999px;padding:7px 14px;cursor:pointer}
 
 /* calculator */
 .calc{padding:0 0 72px}
@@ -53,8 +54,19 @@
 .calc .store-note{background:#fbf6ea;border-radius:12px;padding:12px 14px;font-size:14px;color:#6b5420}
 
 @media(max-width:860px){
-  .drawer-stage{grid-template-columns:1fr;gap:24px}
-  .pile{height:300px}
+  .hero .shot{display:none}
+  .hero{padding:20px 0 28px;gap:0}
+  .drawer{padding:0 0 56px}
+  .drawer h2{font-size:25px}
+  .drawer .lead{margin-bottom:18px;font-size:15.5px}
+  .drawer-stage{grid-template-columns:1fr;gap:20px;min-height:0}
+  .pile{height:250px}
+  .mini{width:100%;max-width:300px}
+  .mini-in{min-height:0}
+  .replay.on{display:inline-block}
+  nav{padding-left:8px}
+  nav a{margin-left:10px;font-size:13.5px;white-space:nowrap}
+  nav a[href$="privacy.html"],nav a[href="#how"]{display:none}
   .calc-box{grid-template-columns:1fr;padding:22px}
 }
 @media(prefers-reduced-motion:reduce){
