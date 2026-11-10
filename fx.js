@@ -103,10 +103,26 @@
 
     function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
 
+    // On phones the flight plays by itself once the drawer is on screen
+    // (scroll-driven motion is fiddly with a thumb); on desktop it follows the scroll.
+    var auto = window.matchMedia("(max-width: 860px)").matches;
+    var autoStart = 0, AUTO_DELAY = 1600, AUTO_LEN = 2600;
+    var replay = sec.querySelector(".replay");
+    function autoP() {
+      if (!autoStart) return 0;
+      return clamp((performance.now() - autoStart - AUTO_DELAY) / AUTO_LEN, 0, 1);
+    }
+    if (replay) replay.addEventListener("click", function () {
+      receipts.forEach(function (r) { r.x = r.hx; r.y = r.hy; r.rot = r.hr; r.vx = r.vy = r.vr = 0; });
+      autoStart = performance.now() - AUTO_DELAY + 300;
+      replay.classList.remove("on");
+      kick();
+    });
+
     var visible = false, raf = 0;
     function frame() {
       raf = 0;
-      var P = reduce ? 1 : progress();
+      var P = reduce ? 1 : (auto ? autoP() : progress());
       var n = receipts.length, arrived = 0;
       receipts.forEach(function (r, i) {
         // each receipt flies in its own window of the overall progress
@@ -131,6 +147,7 @@
         cards[i].classList.toggle("on", on);
       });
       done.classList.toggle("on", arrived === n);
+      if (replay && auto) replay.classList.toggle("on", arrived === n);
       if (visible && !reduce) raf = requestAnimationFrame(frame);
     }
 
@@ -140,6 +157,9 @@
     window.addEventListener("resize", function () { layout(); kick(); });
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible) { layout(); kick(); } }, { rootMargin: "100px" }).observe(sec);
+      new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting && auto && !autoStart) { autoStart = performance.now(); kick(); }
+      }, { threshold: 0.45 }).observe(pile);
     } else { visible = true; kick(); }
     window.addEventListener("load", function () { layout(); kick(); });
   }
