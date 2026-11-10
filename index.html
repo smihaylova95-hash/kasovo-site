@@ -61,12 +61,13 @@
   footer a{color:var(--muted);margin-right:18px}
   @media(max-width:860px){.hero,.law,.plans{grid-template-columns:1fr}.feats,.steps{grid-template-columns:1fr}nav a{margin-left:12px}.hero::before{display:none}}
 </style>
+<link rel="stylesheet" href="fx.css">
 </head>
 <body>
 <div class="wrap">
   <header>
     <a class="logo" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d7f"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#2a9d7f" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</a>
-    <nav><a href="#how">Как работи</a><a href="support.html">Поддръжка</a><a href="privacy.html">Поверителност</a><a class="lang" href="en/">EN</a></nav>
+    <nav><a href="#how">Как работи</a><a href="#calc">Калкулатор</a><a href="support.html">Поддръжка</a><a href="privacy.html">Поверителност</a><a class="lang" href="en/">EN</a></nav>
   </header>
 
   <section class="hero">
@@ -76,9 +77,31 @@
       <p class="sub">Всички касови бележки, гаранции и срокове за връщане на едно място. А когато възникне проблем — Kasovo ти помага да подготвиш рекламация и да се свържеш с магазина.</p>
       <span class="cta soon">Скоро в App Store</span>
       <p class="note">Без акаунт. Без абонамент. Всички магазини.</p>
+      <p class="note android">Използваш Android? <a href="mailto:android@kasovo.com?subject=Kasovo%20%D0%B7%D0%B0%20Android&amp;body=%D0%98%D1%81%D0%BA%D0%B0%D0%BC%20Kasovo%20%D0%B7%D0%B0%20Android.">Пиши ни</a> и ще ти съобщим, когато излезе.</p>
       <div class="badge"><small>★ ★ ★ ЗАКОНОВА ГАРАНЦИЯ</small><b>2 години</b><i>(ЕС)</i></div>
     </div>
     <div class="shot"><img src="home-bg.png" alt="Екранът „Покупки" в Kasovo" width="538" height="1170" loading="eager"></div>
+  </section>
+
+  <section class="drawer" id="drawer">
+    <h2>Това е чекмеджето ти.</h2>
+    <p class="lead">Бутни бележките с мишката или пръста. После скролни надолу и виж какво прави Kasovo с тях.</p>
+    <div class="drawer-stage">
+      <div class="pile"><span class="pile-hint">чекмеджето</span></div>
+      <div class="mini" aria-label="Kasovo подрежда покупките"><div class="mini-in"><h4>Покупки</h4><div class="slots"></div><p class="mini-done">Всичко е подредено. Kasovo помни сроковете.</p></div></div>
+    </div>
+  </section>
+
+  <section class="calc" id="calc">
+    <h2>Колко време ти остава?</h2>
+    <p class="lead">Избери кога си купил нещо и разбери до кога можеш да се откажеш и до кога важи законовата гаранция.</p>
+    <div class="calc-box">
+      <div>
+        <div class="field"><label>КЪДЕ КУПИ</label><div class="seg" role="group"><button type="button" class="on" data-m="online" aria-pressed="true">Онлайн</button><button type="button" data-m="store" aria-pressed="false">В магазин</button></div></div>
+        <div class="field"><label class="lbl-date" for="c-date">Дата на получаване</label><input type="date" id="c-date"></div>
+      </div>
+      <div class="c-out" aria-live="polite"></div>
+    </div>
   </section>
 
   <section class="feats" id="how"><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div><h3>Всички бележки на едно място</h3><p>Снимай касовата бележка и я добави към покупката. Без повече търсене в чекмеджета, имейли и галерията на телефона.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Знай кога изтича гаранцията</h3><p>Следи законовите и търговските гаранции на продуктите си. Kasovo ти напомня преди важните крайни срокове.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg></div><div><h3>Не изпускай срока за връщане</h3><p>При онлайн покупка имаш 14 дни от получаването да се откажеш. Kasovo ти напомня, преди да изтекат.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h3>Имаш проблем? Kasovo помага.</h3><p>Намери официалните канали за контакт с магазина, подготви рекламация и събери необходимите документи на едно място.</p></div></div></section>
@@ -103,5 +126,6 @@
     <div>© 2026 Kasovo · Пловдив</div>
   </footer>
 </div>
+<script src="fx.js" defer></script>
 </body>
 </html>
