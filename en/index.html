@@ -61,12 +61,13 @@
   footer a{color:var(--muted);margin-right:18px}
   @media(max-width:860px){.hero,.law,.plans{grid-template-columns:1fr}.feats,.steps{grid-template-columns:1fr}nav a{margin-left:12px}.hero::before{display:none}}
 </style>
+<link rel="stylesheet" href="../fx.css">
 </head>
 <body>
 <div class="wrap">
   <header>
     <a class="logo" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d7f"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg)"/><path d="M17 12h26a3 3 0 0 1 3 3v33l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3V15a3 3 0 0 1 3-3z" fill="#fff"/><path d="M22 23h14M22 30h14M22 37h9" stroke="#b9c7c0" stroke-width="3" stroke-linecap="round"/><circle cx="45" cy="44" r="10.5" fill="#2a9d7f" stroke="#fff" stroke-width="3"/><path d="M40 44l3.5 3.5 7-7" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Kasovo</a>
-    <nav><a href="#how">How it works</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="lang" href="/">BG</a></nav>
+    <nav><a href="#how">How it works</a><a href="#calc">Calculator</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a class="lang" href="/">BG</a></nav>
   </header>
 
   <section class="hero">
@@ -76,9 +77,31 @@
       <p class="sub">All your receipts, warranties and return windows in one place. And when something goes wrong, Kasovo helps you prepare a claim and contact the store.</p>
       <span class="cta soon">Coming soon to the App Store</span>
       <p class="note">No account. No subscription. Every store.</p>
+      <p class="note android">On Android? <a href="mailto:android@kasovo.com?subject=Kasovo%20for%20Android&amp;body=I%27d%20like%20Kasovo%20on%20Android.">Email us</a> and we'll let you know when it's out.</p>
       <div class="badge"><small>★ ★ ★ LEGAL GUARANTEE</small><b>2 years</b><i>(EU)</i></div>
     </div>
     <div class="shot"><img src="../home-bg.png" alt="The Purchases screen in Kasovo" width="538" height="1170" loading="eager"></div>
+  </section>
+
+  <section class="drawer" id="drawer">
+    <h2>This is your drawer.</h2>
+    <p class="lead">Push the receipts around with your mouse or finger. Then scroll down and watch what Kasovo does with them.</p>
+    <div class="drawer-stage">
+      <div class="pile"><span class="pile-hint">the drawer</span></div>
+      <div class="mini" aria-label="Kasovo organises your purchases"><div class="mini-in"><h4>Purchases</h4><div class="slots"></div><p class="mini-done">All sorted. Kasovo remembers the deadlines.</p></div></div>
+    </div>
+  </section>
+
+  <section class="calc" id="calc">
+    <h2>How much time do you have left?</h2>
+    <p class="lead">Pick when you bought something and see how long you can withdraw and how long the legal guarantee lasts.</p>
+    <div class="calc-box">
+      <div>
+        <div class="field"><label>WHERE DID YOU BUY</label><div class="seg" role="group"><button type="button" class="on" data-m="online" aria-pressed="true">Online</button><button type="button" data-m="store" aria-pressed="false">In store</button></div></div>
+        <div class="field"><label class="lbl-date" for="c-date">Delivery date</label><input type="date" id="c-date"></div>
+      </div>
+      <div class="c-out" aria-live="polite"></div>
+    </div>
   </section>
 
   <section class="feats" id="how"><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div><h3>Every receipt in one place</h3><p>Snap the receipt and attach it to the purchase. No more digging through drawers, emails and your photo library.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Know when the warranty ends</h3><p>Track the legal and commercial warranties on your products. Kasovo reminds you before the important deadlines.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg></div><div><h3>Never miss a return window</h3><p>For online purchases you have 14 days from delivery to withdraw. Kasovo reminds you before they run out.</p></div></div><div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h3>Have a problem? Kasovo helps.</h3><p>Find the store's official contact channels, prepare a claim and gather the documents you need in one place.</p></div></div></section>
@@ -103,5 +126,6 @@
     <div>© 2026 Kasovo · Plovdiv, Bulgaria</div>
   </footer>
 </div>
+<script src="../fx.js" defer></script>
 </body>
 </html>
